@@ -1,0 +1,15 @@
+@scope(incd-nav) {
+    :scope {
+        [aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+
+        [aria-expanded="false"]+* {
+            display: none;
+        }
+
+        [aria-expanded="true"]+* {
+            display: revert;
+        }
+    }
+}
