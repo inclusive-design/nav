@@ -47,18 +47,18 @@ export default class Nav extends Elena(HTMLElement) {
 			button.setAttribute('aria-label', link.textContent);
 			button.innerHTML = this.icon;
 			link.after(button);
-			button.addEventListener('click', this._onClick);
+			button.addEventListener('click', this.#onClick);
 		}
 
 		for (const container of dropdownContainers) {
 			const elements = container.querySelectorAll('a, button');
 			for (const element of elements) {
-				element.addEventListener('blur', this._onBlur);
+				element.addEventListener('blur', this.#onBlur);
 			}
 		}
 
-		document.addEventListener('click', this._onDocumentClick);
-		document.addEventListener('keyup', this._onKeyUp);
+		document.addEventListener('click', this.#onDocumentClick);
+		document.addEventListener('keyup', this.#onKeyUp);
 
 		super.connectedCallback();
 	}
