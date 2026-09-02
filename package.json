@@ -1,6 +1,6 @@
 {
   "name": "@inclusive-design/nav",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Web component implementation of the disclosure navigation menu pattern",
   "main": "dist/bundle.js",
   "type": "module",
