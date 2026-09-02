@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/inclusive-design/nav/compare/v0.1.1...v0.1.2) (2026-09-02)
+
+
+### Bug Fixes
+
+* resolve build artifact issue ([#10](https://github.com/inclusive-design/nav/issues/10)) ([8362053](https://github.com/inclusive-design/nav/commit/836205398ed3bd633d0f9ef1934c4b276b06f29b))
+
 ## [0.1.1](https://github.com/inclusive-design/nav/compare/v0.1.0...v0.1.1) (2026-09-02)
 
 
