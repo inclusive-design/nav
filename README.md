@@ -59,4 +59,6 @@ the icon property:
 ```html
 <incd-nav
     icon="<svg /><!-- Custom icon --></svg>">
+    <nav><!-- Navigation items go here --></nav>
+</incd-nav>
 ```
