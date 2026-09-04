@@ -1,5 +1,11 @@
 import { Elena, unsafeHTML, nothing } from '@elenajs/core';
 
+/**
+ * @displayName Nav
+ * @status alpha
+ *
+ * @event blur - Programmatically remove focus from the component.
+ */
 export default class Nav extends Elena(HTMLElement) {
 	static tagName = 'incd-nav';
 	static events = ['blur'];
@@ -35,7 +41,14 @@ export default class Nav extends Elena(HTMLElement) {
 			this.#collapseButtons();
 		}
 	};
-	icon = '<svg width=\'24\' height=\'25\' aria-hidden=\'true\' role=\'presentation\' fill=\'none\'><path stroke=\'currentColor\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'m6 9.5 6 6 6-6\'></path></svg>';
+	/**
+	 * The icon to use in generated buttons.
+	 * @property
+	 * @type {string}
+	 */
+	icon = `<svg width="24" height="25" aria-hidden="true" role="presentation" fill="none">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9.5 6 6 6-6"></path>
+	</svg>`;
 
 	connectedCallback() {
 		const submenuLinks = this.querySelectorAll(':scope li:has(ul) > a');
