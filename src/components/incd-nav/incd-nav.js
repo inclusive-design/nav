@@ -10,17 +10,19 @@ export default class Nav extends Elena(HTMLElement) {
 	static tagName = 'incd-nav';
 	static events = ['blur'];
 	static props = [{ name: 'icon', reflect: false }];
-	#collapseButtons = () => {
-		const buttons = this.querySelectorAll('[aria-expanded="true"]');
-		for (const button of buttons) {
-			button.setAttribute('aria-expanded', false);
+	#collapse = (shouldFocus = false) => {
+		const expandedMenuButton = this.querySelector('[aria-expanded="true"]');
+		if (shouldFocus) {
+			expandedMenuButton?.focus();
 		}
+
+		expandedMenuButton?.setAttribute('aria-expanded', false);
 	};
 	#onClick = (event) => {
 		const button = event.target.closest('button');
 		const isAriaExpanded = (button.getAttribute('aria-expanded') === 'true');
 		if (!isAriaExpanded) {
-			this.#collapseButtons();
+			this.#collapse();
 		}
 
 		button.setAttribute('aria-expanded', !isAriaExpanded);
@@ -28,17 +30,19 @@ export default class Nav extends Elena(HTMLElement) {
 	#onDocumentClick = (event) => {
 		event.preventDefault();
 		if (!event.target.closest('incd-nav [aria-expanded]')) {
-			this.#collapseButtons();
+			this.#collapse();
 		}
 	};
 	#onKeyUp = (event) => {
-		if (event.key === 'Escape') {
-			this.#collapseButtons();
+		if (event.key !== 'Escape') {
+			return;
 		}
+
+		this.#collapse(true);
 	};
 	#onBlur = (event) => {
 		if (event.target?.closest('li:has(ul)') !== event.relatedTarget?.closest('li:has(ul)')) {
-			this.#collapseButtons();
+			this.#collapse();
 		}
 	};
 	/**
