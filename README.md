@@ -52,3 +52,13 @@ The web component will add buttons to expand and collapse the submenus based on
 the hybrid [disclosure navigation menu](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/)
 pattern and attach event handlers for click, <kbd>ESC</kbd> and blur events to
 collapse/expand menus as appropriate.
+
+To customize the SVG icon in the buttons, set it by passing an SVG element using
+the icon property:
+
+```html
+<incd-nav
+    icon="<svg /><!-- Custom icon --></svg>">
+    <nav><!-- Navigation items go here --></nav>
+</incd-nav>
+```

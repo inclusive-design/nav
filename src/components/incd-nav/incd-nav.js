@@ -1,4 +1,4 @@
-import { Elena, html } from '@elenajs/core';
+import { Elena, unsafeHTML, nothing } from '@elenajs/core';
 
 export default class Nav extends Elena(HTMLElement) {
 	static tagName = 'incd-nav';
@@ -35,7 +35,7 @@ export default class Nav extends Elena(HTMLElement) {
 			this.#collapseButtons();
 		}
 	};
-	icon = html`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" aria-hidden="true" role="presentation" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9.5 6 6 6-6"></path></svg>`;
+	icon = '<svg width=\'24\' height=\'25\' aria-hidden=\'true\' role=\'presentation\' fill=\'none\'><path stroke=\'currentColor\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'m6 9.5 6 6 6-6\'></path></svg>';
 
 	connectedCallback() {
 		const submenuLinks = this.querySelectorAll(':scope li:has(ul) > a');
@@ -45,7 +45,7 @@ export default class Nav extends Elena(HTMLElement) {
 			const button = document.createElement('button');
 			button.setAttribute('aria-expanded', false);
 			button.setAttribute('aria-label', link.textContent);
-			button.innerHTML = this.icon;
+			button.innerHTML = this.icon ? unsafeHTML(this.icon) : nothing;
 			link.after(button);
 			button.addEventListener('click', this.#onClick);
 		}
