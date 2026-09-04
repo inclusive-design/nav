@@ -43,7 +43,7 @@ export default class Nav extends Elena(HTMLElement) {
 
 		for (const link of submenuLinks) {
 			const button = document.createElement('button');
-			const id = Math.random().toString(36).substr(2, 9);
+			const id = Math.random().toString(36).slice(2, 9);
 			const controlledElement = link.nextElementSibling;
 			controlledElement.id = id;
 			button.setAttribute('aria-expanded', false);
