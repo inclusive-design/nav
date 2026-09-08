@@ -7,7 +7,7 @@
 
 * adjust icon configuration, add documentation (resolves [#14](https://github.com/inclusive-design/nav/issues/14)) ([#15](https://github.com/inclusive-design/nav/issues/15)) ([6ae0e88](https://github.com/inclusive-design/nav/commit/6ae0e88012877ce7180291d1c5e8fc474d548ca1))
 * implement aria-controls (resolves [#12](https://github.com/inclusive-design/nav/issues/12)) ([#13](https://github.com/inclusive-design/nav/issues/13)) ([c020b0c](https://github.com/inclusive-design/nav/commit/c020b0c9cc23538787fd1673825383f8ca7327c6))
-* remove `[@scope](https://github.com/scope)`, add documentation blocks ([#18](https://github.com/inclusive-design/nav/issues/18)) ([90b55c2](https://github.com/inclusive-design/nav/commit/90b55c2f6095543098984e4ccf160a1c327bf422))
+* remove `@scope`, add documentation blocks ([#18](https://github.com/inclusive-design/nav/issues/18)) ([90b55c2](https://github.com/inclusive-design/nav/commit/90b55c2f6095543098984e4ccf160a1c327bf422))
 
 
 ### Bug Fixes
