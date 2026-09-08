@@ -28,7 +28,6 @@ export default class Nav extends Elena(HTMLElement) {
 		button.setAttribute('aria-expanded', !isAriaExpanded);
 	};
 	#onDocumentClick = (event) => {
-		event.preventDefault();
 		if (!event.target.closest('incd-nav [aria-expanded]')) {
 			this.#collapse();
 		}
