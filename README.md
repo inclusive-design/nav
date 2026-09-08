@@ -1,5 +1,7 @@
 # Inclusive Disclosure Navigation
 
+**NOTE: Now maintained at [inclusive-design/components](https://github.com/inclusive-design/components).**
+
 Web component implementation of the [disclosure navigation menu pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/).
 
 ## Usage
